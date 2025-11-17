@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FIXED: Shopify API key injected through Vite env -->
+  <meta name="shopify-api-key" content="">
+  <script>
+    window.__SHOPIFY_API_KEY__ = import.meta.env.VITE_SHOPIFY_API_KEY;
+    document.querySelector('meta[name="shopify-api-key"]').setAttribute('content', window.__SHOPIFY_API_KEY__);
+  </script>
+
+  <script src="https://cdn.shopify.com/shopifycloud/app-bridge.js"></script>
+
+  <title>Shopify App</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- FIXED: Removed %BUILD_TIME% & %CACHE_BUST% (they break Vite) -->
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>

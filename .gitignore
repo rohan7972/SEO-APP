@@ -1,0 +1,14 @@
+
+# Secrets
+.env
+*.env
+.env.*
+
+# Secrets
+.env
+*.env
+.env.*
+
+.shopify
+frontend/node_modules/.vite/
+node_modules
